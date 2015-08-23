@@ -8,20 +8,20 @@ if (Meteor.isClient) {
   //   } 
   // });
 
-  Template.hello.helpers({
+  Template.bookList.helpers({
     books: function () {
       return Session.get('books');
     }
   });
 
-  Template.hello.events({
+  Template.bookList.events({
     'click button': function () {
       // increment the counter when button is clicked
       Session.set('counter', Session.get('counter') + 1);
     }
   });
 
-  Template.hello.rendered = function() {
+  Template.bookList.rendered = function() {
     Session.setDefault('books', [
       {title: "To Kill a Mockingbird", author: "Harper Lee"},
       {title: "1984", author: "George Orwell"},
