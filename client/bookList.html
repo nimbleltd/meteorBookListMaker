@@ -1,7 +1,7 @@
-
 <template name="bookList">
-
 {{> loginButtons}}
+
+{{#if currentUser}}
 
   <h3>Here are your books:</h3>
   <UL>
@@ -21,6 +21,8 @@
   	<input type="text" name="author">
   	<input type="submit" value="Add Book">
   </form>
-
+  {{else}}
+    <h3>Please log in to see your books</h3>
+  {{/if}}
 
 </template>
